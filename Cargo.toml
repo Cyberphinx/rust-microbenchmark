@@ -1,0 +1,11 @@
+[package]
+name = "rust-profiles"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+criterion = { version = "0.7.0", features = ["html_reports"] }
+
+[[bench]]
+name = "rust_profiles"
+harness = false
