@@ -33,7 +33,7 @@ fn rust_layout(c: &mut Criterion) {
         };
         1_000_000
     ];
-    c.bench_function("access repr(Rust)", |b| {
+    c.bench_function("repr(Rust)", |b| {
         b.iter(|| {
             let mut s = 0u64;
             for item in black_box(&data) {
@@ -55,7 +55,7 @@ fn c_layout(c: &mut Criterion) {
         };
         1_000_000
     ];
-    c.bench_function("access repr(C)", |b| {
+    c.bench_function("repr(C)", |b| {
         b.iter(|| {
             let mut s = 0u64;
             for item in black_box(&data) {
