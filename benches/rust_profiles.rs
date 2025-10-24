@@ -5,21 +5,21 @@ use criterion::{Criterion, criterion_group, criterion_main};
 #[derive(Clone)]
 #[repr(Rust)]
 pub struct RustRepr {
-    pub tiny: bool,
-    pub normal: u32,
-    pub small: u8,
     pub long: u64,
+    pub normal: u32,
     pub short: u16,
+    pub small: u8,
+    pub tiny: bool,
 }
 
 #[derive(Clone)]
 #[repr(C)]
 pub struct CRepr {
-    pub tiny: bool,
-    pub normal: u32,
-    pub small: u8,
     pub long: u64,
+    pub normal: u32,
     pub short: u16,
+    pub small: u8,
+    pub tiny: bool,
 }
 
 fn rust_layout(c: &mut Criterion) {
